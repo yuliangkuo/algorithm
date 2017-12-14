@@ -16,7 +16,6 @@
  */
 
 /*
- Total is   
 
          i --->    1   2   3   size m
          j --->        9   9   size n
@@ -30,6 +29,7 @@
     -------------------------------
     res[idx] 0  1  2   3   4   size m+n       
 */
+
 char* multiply(char* num1, char* num2) {
     int i, j;
     int m = strlen(num1);
@@ -63,7 +63,7 @@ char* multiply(char* num1, char* num2) {
         buf[i] = (char)(res[i] + '0');
     }
     
-    if (buf[0] == '0') {
+    if (buf[0] == '0') 
         if(buf[1] == '0')
             return buf + m + n -1;
         else
@@ -82,4 +82,5 @@ int main(void)
 	buf = multiply("7099", "7769");  // expected 55152131
 	printf("7099 x 7769 = %s (expected 55152131)\n", buf);
 
+    return buf;
 }
